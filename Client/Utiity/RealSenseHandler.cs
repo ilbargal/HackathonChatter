@@ -30,6 +30,7 @@ namespace ClientWPF.Utiity
         public event Action<PXCMHandData> FistFired = data => { };
         public event Action<PXCMHandData> SwipeLeftFired = data => { };
         public event Action<PXCMHandData> SwipeRightFired = data => { };
+        public event Action<PXCMHandData> VSignFired = data => { }; 
  
         #endregion
 
@@ -104,6 +105,9 @@ namespace ClientWPF.Utiity
                         SwipeLeftFired(_handData);
                     if (_handData.IsGestureFired("swipe_right", out _gestureData))
                         SwipeRightFired(_handData);
+                    if (_handData.IsGestureFired("v_sign", out _gestureData))
+                        VSignFired(_handData);
+                    
                 }
 
                 // Release the frame

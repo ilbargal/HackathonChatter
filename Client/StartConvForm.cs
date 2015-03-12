@@ -10,7 +10,7 @@ namespace videochatsample
 {
     public partial class StartConvForm : Form
     {
-        Dictionary<int, string> _loginUsers = new Dictionary<int, string>() { { 100, "רועי עצמון" }, { 101, "בני בזומניק" }, { 102, "Leon" }, { 103, "Adi" } };
+        Dictionary<int, string> _loginUsers = new Dictionary<int, string>() { { 100, "רועי עצמון" }, { 101, "בני בזומניק" }, { 102, "עדי צ'רניצקי" }, { 103, "Adi" } };
         private ChatForm frm = new ChatForm();
         List<User> users = new List<User>()
         {
@@ -18,19 +18,19 @@ namespace videochatsample
             {
                 ID =int.Parse(Globals.USER_1),
                 Name = "בני בזומניך",
-                PictureURL = ""
+                PictureURL = @"C:\Users\Hackathon-IDF\Desktop\Reps\HackathonChatter\Client\Pics\Benny.jpg"
             },
             new User()
             {
                 ID =int.Parse(Globals.USER_2),
                 Name = "אליה אבן צור",
-                PictureURL = ""
+                PictureURL = @"C:\Users\Hackathon-IDF\Desktop\Reps\HackathonChatter\Client\Pics\Eliya.jpg"
             },
             new User()
             {
                 ID =int.Parse(Globals.USER_3),
                 Name = "מיכאל שקסתא",
-                PictureURL = ""
+                PictureURL = @"C:\Users\Hackathon-IDF\Desktop\Reps\HackathonChatter\Client\Pics\Michael.jpg"
             },
         };
 
@@ -64,17 +64,25 @@ namespace videochatsample
 
         private void InstaceOnSwipeLeftFired(PXCMHandData pxcmHandData)
         {
-            listBox1.SelectedIndex = (listBox1.SelectedIndex - 1 + listBox1.Items.Count) % listBox1.Items.Count;
+            this.BeginInvoke((Action)(()=>
+            listBox1.SelectedIndex = (listBox1.SelectedIndex - 1 + listBox1.Items.Count) % listBox1.Items.Count));
         }
 
         private void InstaceOnSwipeRightFired(PXCMHandData pxcmHandData)           
         {
-            listBox1.SelectedIndex = (listBox1.SelectedIndex + 1) % listBox1.Items.Count;
+            this.BeginInvoke((Action)(()=>
+            listBox1.SelectedIndex = (listBox1.SelectedIndex + 1) % listBox1.Items.Count));
         }
 
         private void InstaceOnTapFired(PXCMHandData pxcmHandData)
         {
-            button1_Click(null, null);
+            this.BeginInvoke((Action)(()=>
+            button1_Click(null, null)));
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.pictureBox1.ImageLocation = (listBox1.SelectedItem as User).PictureURL;
         }
     }
 }

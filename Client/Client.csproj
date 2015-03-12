@@ -166,6 +166,9 @@
     <Content Include="libpxccpp2c.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pics\Benny.jpg" />
+    <Content Include="Pics\Eliya.jpg" />
+    <Content Include="Pics\Michael.jpg" />
     <EmbeddedResource Include="ChatForm.resx">
       <DependentUpon>ChatForm.cs</DependentUpon>
     </EmbeddedResource>

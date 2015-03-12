@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
+using System.Drawing.Text;
 using System.Linq;
 using Client;
 using ClientWPF.Utiity;
@@ -409,39 +410,60 @@ namespace videochatsample
             this.lblTest.Hide();
         }
 
-        private void initRealSense()
+	    private void invokeVSign()
+	    {
+            this.Close();
+	    }
+
+	    private void initRealSense()
         {
             RealSenseHandler.Instace.WaveFired += (data) =>
             {
-                this.lblTest.Text = "hello!";
+                //this.lblTest.Text = "hello!";
             };
 
+            RealSenseHandler.Instace.VSignFired += (data) =>
+            {
+                if (this.InvokeRequired)
+                {
+                    this.BeginInvoke(new Action(invokeVSign));
+                }
+                else
+                {
+                    this.invokeVSign();
+                }
+            };
+            
             RealSenseHandler.Instace.ThumbUpFired += (data) =>
             {
-                vc.IncreaseVol();
-                this.lblTest.Text = "ThumbsUp!";
+                this.BeginInvoke((Action)(() =>
+                {
+                    vc.IncreaseVol();
+                    this.lblTest.Text = "ThumbsUp!";
+                }));
             };
 
             RealSenseHandler.Instace.ThumbDownFired += (data) =>
             {
-                vc.DecreaseVol();
-                this.lblTest.Text = "ThumbsDown!";
+                this.BeginInvoke((Action)(() =>
+                {
+                    vc.DecreaseVol();
+                    this.lblTest.Text = "ThumbsDown!";
+                }));
             };
 
             RealSenseHandler.Instace.SpreadFingersFired += (data) =>
             {
-                var dateTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-                if (dateTime - lngMuteTime > 5 * 100)
+                this.BeginInvoke((Action) (() =>
                 {
-                    vc.Mute();
-                    this.lblTest.Text = "No sound";
-                    lngMuteTime = dateTime;
-                }
-            };
-
-            RealSenseHandler.Instace.FistFired += (data) =>
-            {
-                //sndrMeScreen.Disconnect();
+                    var dateTime = DateTime.Now.Ticks/TimeSpan.TicksPerMillisecond;
+                    if (dateTime - lngMuteTime > 5*100)
+                    {
+                        vc.Mute();
+                        this.lblTest.Text = "No sound";
+                        lngMuteTime = dateTime;
+                    }
+                }));
             };
         }
 
