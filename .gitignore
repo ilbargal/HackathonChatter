@@ -1,0 +1,11 @@
+*/bin/
+*/obj/
+*\bin\
+*\obj\
+*/bin/*
+*/obj/*
+*.Cache
+*/bin/*.dll
+*/bin/*.pdb
+*/bin/*.exe
+*/bin/*.exe.*
