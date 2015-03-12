@@ -9,3 +9,4 @@
 */bin/*.pdb
 */bin/*.exe
 */bin/*.exe.*
+Client/FaceRecognition/LoginForm.designer.cs
