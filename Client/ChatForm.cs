@@ -62,13 +62,13 @@ namespace videochatsample
             this.label15 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblTest = new System.Windows.Forms.Label();
             this.sndrMeScreen = new AxVideoChatSenderLib.AxVideoChatSender();
-            this.axVideoChatReceiver1 = new AxVideoChatReceiverLib.AxVideoChatReceiver();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.chkreceiveaudio = new System.Windows.Forms.CheckBox();
             this.chkreceivevideo = new System.Windows.Forms.CheckBox();
+            this.lblTest = new System.Windows.Forms.Label();
+            this.axVideoChatReceiver1 = new AxVideoChatReceiverLib.AxVideoChatReceiver();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sndrMeScreen)).BeginInit();
@@ -182,6 +182,7 @@ namespace videochatsample
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PowderBlue;
+            this.groupBox2.BackgroundImage = global::videochatsample.Properties.Resources.image__2_1;
             this.groupBox2.Controls.Add(this.sndrMeScreen);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
@@ -195,15 +196,6 @@ namespace videochatsample
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
-            // lblTest
-            // 
-            this.lblTest.AutoSize = true;
-            this.lblTest.Location = new System.Drawing.Point(293, 217);
-            this.lblTest.Name = "lblTest";
-            this.lblTest.Size = new System.Drawing.Size(29, 12);
-            this.lblTest.TabIndex = 12;
-            this.lblTest.Text = "label3";
-            // 
             // sndrMeScreen
             // 
             this.sndrMeScreen.Enabled = true;
@@ -213,21 +205,12 @@ namespace videochatsample
             this.sndrMeScreen.Size = new System.Drawing.Size(100, 86);
             this.sndrMeScreen.TabIndex = 11;
             // 
-            // axVideoChatReceiver1
-            // 
-            this.axVideoChatReceiver1.Enabled = true;
-            this.axVideoChatReceiver1.Location = new System.Drawing.Point(6, 17);
-            this.axVideoChatReceiver1.Name = "axVideoChatReceiver1";
-            this.axVideoChatReceiver1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVideoChatReceiver1.OcxState")));
-            this.axVideoChatReceiver1.Size = new System.Drawing.Size(407, 324);
-            this.axVideoChatReceiver1.TabIndex = 10;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.SkyBlue;
             this.button4.Enabled = false;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(231, 154);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 40);
@@ -240,7 +223,7 @@ namespace videochatsample
             // 
             this.button3.BackColor = System.Drawing.Color.SkyBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(231, 108);
             this.button3.Name = "button3";
@@ -276,16 +259,36 @@ namespace videochatsample
             this.chkreceivevideo.Text = "Receive Video ";
             this.chkreceivevideo.UseVisualStyleBackColor = false;
             // 
+            // lblTest
+            // 
+            this.lblTest.AutoSize = true;
+            this.lblTest.Location = new System.Drawing.Point(293, 217);
+            this.lblTest.Name = "lblTest";
+            this.lblTest.Size = new System.Drawing.Size(29, 12);
+            this.lblTest.TabIndex = 12;
+            this.lblTest.Text = "label3";
+            // 
+            // axVideoChatReceiver1
+            // 
+            this.axVideoChatReceiver1.Enabled = true;
+            this.axVideoChatReceiver1.Location = new System.Drawing.Point(6, 17);
+            this.axVideoChatReceiver1.Name = "axVideoChatReceiver1";
+            this.axVideoChatReceiver1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVideoChatReceiver1.OcxState")));
+            this.axVideoChatReceiver1.Size = new System.Drawing.Size(407, 324);
+            this.axVideoChatReceiver1.TabIndex = 10;
+            // 
             // ChatForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(4, 11);
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::videochatsample.Properties.Resources.image__2_;
             this.ClientSize = new System.Drawing.Size(428, 350);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChatForm";
-            this.Text = "Video Chat  ActiveX Control ";
+            this.Text = "Chatter";
             this.TransparencyKey = System.Drawing.Color.Navy;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChatForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
