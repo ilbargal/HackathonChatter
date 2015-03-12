@@ -68,10 +68,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.image;
             this.ClientSize = new System.Drawing.Size(258, 184);
             this.Controls.Add(this.axVideoChatServer1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ServerForm";
             this.Text = "Video Chat Pro Server";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Closing);

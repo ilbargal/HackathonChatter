@@ -10,7 +10,7 @@ namespace videochatsample
 {
     public partial class StartConvForm : Form
     {
-        Dictionary<int, string> _loginUsers = new Dictionary<int, string>() { { 100, "רועי עצמון" }, { 101, "בני בזומניק" }, { 102, "Leon" }, { 103, "Adi" } };
+        Dictionary<int, string> _loginUsers = new Dictionary<int, string>() { { 100, "בר גל" }, { 101, "בני בזומניק" }, { 102, "Leon" }, { 103, "Adi" } };
         private ChatForm frm = new ChatForm();
         List<User> users = new List<User>()
         {
@@ -18,19 +18,19 @@ namespace videochatsample
             {
                 ID =int.Parse(Globals.USER_1),
                 Name = "בני בזומניך",
-                PictureURL = ""
+                PictureURL = "http://images1.ynet.co.il/PicServer2/02022009/2078172/Spongbob.-Nickelodeon-chann&91;1&93;_wa.jpg"
             },
             new User()
             {
                 ID =int.Parse(Globals.USER_2),
                 Name = "אליה אבן צור",
-                PictureURL = ""
+                PictureURL = "http://www.themarker.com/polopoly_fs/1.1593408.1324041203!/image/3280629740.jpg_gen/derivatives/landscape_300/3280629740.jpg"
             },
             new User()
             {
                 ID =int.Parse(Globals.USER_3),
                 Name = "מיכאל שקסתא",
-                PictureURL = ""
+                PictureURL = "http://static1.squarespace.com/static/50067f0024ac21f35d8dc763/t/52776b91e4b0bef5deedfe53/1383558036774/10.png"
             },
         };
 
@@ -75,6 +75,11 @@ namespace videochatsample
         private void InstaceOnTapFired(PXCMHandData pxcmHandData)
         {
             button1_Click(null, null);
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.pictureBox1.LoadAsync(((User)this.listBox1.SelectedItem).PictureURL);
         }
     }
 }

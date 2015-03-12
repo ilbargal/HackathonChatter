@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartConvForm));
             this.btnConnect = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,12 +38,13 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(29, 346);
+            this.btnConnect.Location = new System.Drawing.Point(102, 318);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 25);
             this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "התחבר";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Visible = false;
             this.btnConnect.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBox1
@@ -52,6 +54,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(390, 95);
             this.listBox1.TabIndex = 5;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -74,12 +77,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 383);
+            this.BackgroundImage = global::videochatsample.Properties.Resources.image;
+            this.ClientSize = new System.Drawing.Size(444, 323);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnConnect);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartConvForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

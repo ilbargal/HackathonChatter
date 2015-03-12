@@ -87,5 +87,20 @@ namespace Client
                 IncreaseVol();
             }
         }
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VolumeControler));
+            this.SuspendLayout();
+            // 
+            // VolumeControler
+            // 
+            this.BackgroundImage = global::videochatsample.Properties.Resources.image__2_2;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "VolumeControler";
+            this.ResumeLayout(false);
+
+        }
     }
 }

@@ -166,6 +166,11 @@
     <Content Include="libpxccpp2c.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="VolumeControlerForm.resx">
+      <DependentUpon>VolumeControlerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="pics\image.jpg" />
+    <None Include="pics\image %282%29.jpg" />
     <EmbeddedResource Include="ChatForm.resx">
       <DependentUpon>ChatForm.cs</DependentUpon>
     </EmbeddedResource>
