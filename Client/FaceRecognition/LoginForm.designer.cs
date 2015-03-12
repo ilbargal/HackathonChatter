@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.Stop = new System.Windows.Forms.Button();
             this.sourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +46,7 @@
             this.RegisterUser = new System.Windows.Forms.Button();
             this.UnregisterUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             this.Status2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Panel2)).BeginInit();
@@ -54,7 +56,7 @@
             // 
             this.Stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Stop.Enabled = false;
-            this.Stop.Location = new System.Drawing.Point(820, 254);
+            this.Stop.Location = new System.Drawing.Point(274, 254);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(80, 23);
             this.Stop.TabIndex = 3;
@@ -90,6 +92,7 @@
             this.MainMenu.Size = new System.Drawing.Size(941, 24);
             this.MainMenu.TabIndex = 0;
             this.MainMenu.Text = "MainMenu";
+            this.MainMenu.Visible = false;
             // 
             // colorResolutionToolStripMenuItem
             // 
@@ -121,21 +124,21 @@
             this.Live.Checked = true;
             this.Live.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Live.Name = "Live";
-            this.Live.Size = new System.Drawing.Size(152, 22);
+            this.Live.Size = new System.Drawing.Size(121, 22);
             this.Live.Text = "Live";
             this.Live.Click += new System.EventHandler(this.Live_Click);
             // 
             // Playback
             // 
             this.Playback.Name = "Playback";
-            this.Playback.Size = new System.Drawing.Size(152, 22);
+            this.Playback.Size = new System.Drawing.Size(121, 22);
             this.Playback.Text = "Playback";
             this.Playback.Click += new System.EventHandler(this.Playback_Click);
             // 
             // Record
             // 
             this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(152, 22);
+            this.Record.Size = new System.Drawing.Size(121, 22);
             this.Record.Text = "Record";
             this.Record.Click += new System.EventHandler(this.Record_Click);
             // 
@@ -145,11 +148,12 @@
             this.StatusLabel,
             this.AlertsLabel});
             this.Status2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.Status2.Location = new System.Drawing.Point(0, 481);
+            this.Status2.Location = new System.Drawing.Point(0, 283);
             this.Status2.Name = "Status2";
-            this.Status2.Size = new System.Drawing.Size(941, 20);
+            this.Status2.Size = new System.Drawing.Size(395, 20);
             this.Status2.TabIndex = 25;
             this.Status2.Text = "Status2";
+            this.Status2.Visible = false;
             // 
             // StatusLabel
             // 
@@ -168,15 +172,14 @@
             // 
             // Panel2
             // 
-            this.Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel2.ErrorImage = null;
+            this.Panel2.Image = global::videochatsample.Properties.Resources.image__2_1;
             this.Panel2.InitialImage = null;
-            this.Panel2.Location = new System.Drawing.Point(12, 27);
+            this.Panel2.Location = new System.Drawing.Point(0, 0);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(802, 444);
+            this.Panel2.Size = new System.Drawing.Size(395, 269);
             this.Panel2.TabIndex = 27;
             this.Panel2.TabStop = false;
             // 
@@ -184,24 +187,26 @@
             // 
             this.RegisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterUser.Enabled = false;
-            this.RegisterUser.Location = new System.Drawing.Point(820, 283);
+            this.RegisterUser.Location = new System.Drawing.Point(274, 283);
             this.RegisterUser.Name = "RegisterUser";
             this.RegisterUser.Size = new System.Drawing.Size(80, 23);
             this.RegisterUser.TabIndex = 34;
             this.RegisterUser.Text = "Register";
             this.RegisterUser.UseVisualStyleBackColor = true;
+            this.RegisterUser.Visible = false;
             this.RegisterUser.Click += new System.EventHandler(this.RegisterUser_Click);
             // 
             // UnregisterUser
             // 
             this.UnregisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UnregisterUser.Enabled = false;
-            this.UnregisterUser.Location = new System.Drawing.Point(820, 312);
+            this.UnregisterUser.Location = new System.Drawing.Point(274, 312);
             this.UnregisterUser.Name = "UnregisterUser";
             this.UnregisterUser.Size = new System.Drawing.Size(80, 23);
             this.UnregisterUser.TabIndex = 35;
             this.UnregisterUser.Text = "Unregister";
             this.UnregisterUser.UseVisualStyleBackColor = true;
+            this.UnregisterUser.Visible = false;
             this.UnregisterUser.Click += new System.EventHandler(this.UnregisterUser_Click);
             // 
             // label1
@@ -213,11 +218,23 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "label1";
             // 
-            // MainForm
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SkyBlue;
+            this.label2.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(247, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 17);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "מזהה פנים... אנא המתן";
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 501);
+            this.ClientSize = new System.Drawing.Size(395, 269);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UnregisterUser);
             this.Controls.Add(this.RegisterUser);
@@ -226,8 +243,9 @@
             this.Controls.Add(this.Stop);
             this.Controls.Add(this.MainMenu);
             this.DoubleBuffered = true;
-            this.Name = "MainForm";
-            this.Text = "Intel(R) RealSense(TM) SDK: Face Tracking";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "LoginForm";
+            this.Text = "החברות";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
@@ -258,5 +276,6 @@
         private System.Windows.Forms.Button UnregisterUser;
         private System.Windows.Forms.ToolStripMenuItem colorResolutionToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

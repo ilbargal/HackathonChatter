@@ -38,37 +38,45 @@
             // 
             // btnConnect
             // 
+            this.btnConnect.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConnect.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.Location = new System.Drawing.Point(102, 318);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(163, 25);
             this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "התחבר";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Visible = false;
             this.btnConnect.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.listBox1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 182);
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Location = new System.Drawing.Point(102, 217);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(163, 95);
+            this.listBox1.Size = new System.Drawing.Size(163, 89);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 9);
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(133, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "בחר משתמש לשיחה";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(102, 66);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 145);
             this.pictureBox1.TabIndex = 7;
@@ -79,7 +87,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::videochatsample.Properties.Resources.image;
-            this.ClientSize = new System.Drawing.Size(191, 291);
+            this.ClientSize = new System.Drawing.Size(381, 446);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -87,6 +95,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartConvForm";
+            this.Text = "פתיחת שיחה";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
